@@ -1,44 +1,75 @@
 
 $(document).on('click','.container',function(event) {
-    moveAndAnimate()
+
+    //var destinationDiv = document.getElementById('destinationDiv');
+
+    var movableDiv = document.getElementById(localStorage.getItem('id'));
+    // Create a copy of the div
+    var divCopy = movableDiv.cloneNode(true);
+  
+    // Set the position of the copy to the initial position of the bottom div
+    var rect = movableDiv.getBoundingClientRect();
+    divCopy.style.position = 'absolute';
+    divCopy.classList.add('cloned-class'); 
+    divCopy.style.left = rect.left + 'px';
+    divCopy.style.top = rect.top + 'px';
+  
+    // Append the copy to the body - kwame you can also append the copiedDiv to a divNode
+    document.body.appendChild(divCopy);
+  
+    // Calculate the distance to move the copy to the click point
+    var offsetX = event.clientX - rect.left - (divCopy.offsetWidth / 2);
+    var offsetY = event.clientY - rect.top - (divCopy.offsetHeight / 2);
+  
+    // Trigger the animation by setting the transform
+   
+      divCopy.style.transition = 'transform 0.5s ease-in-out';
+      divCopy.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px)';
+     
+    //   divCopy.addEventListener('transitionend', function() {
+    //     divCopy.style.display = 'none';
+    //   });
+
+
 });
 
 $(document).on('click','.cloned-class',function(event) {
-    moveAndAnimate()
+
+    //var destinationDiv = document.getElementById('destinationDiv');
+
+    var movableDiv = document.getElementById(localStorage.getItem('id'));
+    // Create a copy of the div
+    var divCopy = movableDiv.cloneNode(true);
+  
+    // Set the position of the copy to the initial position of the bottom div
+    var rect = movableDiv.getBoundingClientRect();
+    divCopy.style.position = 'absolute';
+    divCopy.classList.add('cloned-class'); 
+    divCopy.style.left = rect.left + 'px';
+    divCopy.style.top = rect.top + 'px';
+  
+    // Append the copy to the body - kwame you can also append the copiedDiv to a divNode
+    document.body.appendChild(divCopy);
+  
+    // Calculate the distance to move the copy to the click point
+    var offsetX = event.clientX - rect.left - (divCopy.offsetWidth / 2);
+    var offsetY = event.clientY - rect.top - (divCopy.offsetHeight / 2);
+  
+    // Trigger the animation by setting the transform
+   
+      divCopy.style.transition = 'transform 0.5s ease-in-out';
+      divCopy.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px)';
+     
+    //   divCopy.addEventListener('transitionend', function() {
+    //     divCopy.style.display = 'none';
+    //   });
+
+
 });
 
 
-$(document).on("click",'.move',function() { // use the one in the useState hook to handle active
-    console.log($(this).attr('id'));
+$('.move').click(function() { // use the one in the useState hook to handle active
     localStorage.setItem('id',$(this).attr('id'));
 })
-
-function moveAndAnimate() {
-    var movableDiv = document.getElementById(localStorage.getItem('id'));
-    var divCopy = movableDiv.cloneNode(true);
-    var rect = movableDiv.getBoundingClientRect();
-  
-    divCopy.style.position = 'absolute';
-    divCopy.classList.add('cloned-class');
-    divCopy.style.left = rect.left + 'px';
-    divCopy.style.top = rect.top + 'px';
-    document.body.appendChild(divCopy);
-  
-    var targetDiv = document.getElementById('destinationDiv'); // Replace 'yourTargetDivId' with the actual ID of your target div
-    animateCopy(divCopy, targetDiv);
-}
-
-function animateCopy(element, targetDiv) {
-    var rect = targetDiv.getBoundingClientRect();
-    var offsetX = rect.left - element.getBoundingClientRect().left;
-    var offsetY = rect.top - element.getBoundingClientRect().top;
-  
-    element.style.transition = 'transform 0.5s ease-in-out';
-    element.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px)';
-  
-//     element.addEventListener('transitionend', function() {
-//         element.style.display = 'none';
-//     });
-// }
 
   

@@ -9,10 +9,6 @@
 <body>
     <center>
     <div class="container">
-        <div id="destinationDiv">comehere</div>
-        <div></div>
-        <div></div>
-        <div></div>
     </div>
     </center>
   <div id="movableDiv1" class="move"></div>
