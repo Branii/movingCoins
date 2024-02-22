@@ -1,0 +1,45 @@
+<svg width="61" height="64" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d">
+            <stop stop-color="#5FA445" offset="0%" />
+            <stop stop-color="#3E8341" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="f">
+            <stop stop-color="#61A645" offset="0%" />
+            <stop stop-color="#3B8041" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="g">
+            <stop stop-color="#FEF8EC" offset="0%" />
+            <stop stop-color="#F8F1E1" offset="100%" />
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="h">
+            <stop stop-color="#FEF8ED" offset="0%" />
+            <stop stop-color="#FCF2D8" offset="100%" />
+        </linearGradient>
+        <ellipse id="a" cx="30.04" cy="27.968" rx="30.04" ry="27.968" />
+        <circle id="c" cx="30.04" cy="30.04" r="30.04" />
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 7.25)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a" />
+            </mask>
+            <use fill="#275E29" xlink:href="#a" />
+            <path fill="#DBCBA6" mask="url(#b)"
+                d="M4.957 38.381 2.34 41.867l6.022 8.517 4.068 2.444 2.494-4.143zm18.237 13.274-1.441 6.01h16.21l-.546-6.01zm22.173-3.382 2.994 3.894c2.658-1.934 4.548-3.51 5.668-4.724 1.12-1.215 2.525-3.145 4.214-5.788l-2.529-3.274-10.347 9.892Z" />
+        </g>
+        <mask id="e" fill="#fff">
+            <use xlink:href="#c" />
+        </mask>
+        <use fill="url(#d)" xlink:href="#c" />
+        <path
+            d="M36.982 55.936 38.92 67.33H21.753l1.936-11.394h13.293Zm15.999-12.133 9.426 6.688-12.138 12.138-6.688-9.426 9.4-9.4Zm-45.29 0 9.4 9.4-6.689 9.426L-1.735 50.49l9.426-6.688Zm59.417-21.828V39.14l-11.394-1.936V23.911l11.394-1.936Zm-73.545 0L4.957 23.91v13.293L-6.437 39.14V21.975ZM50.269-1.514l12.138 12.138-9.426 6.688-9.4-9.4 6.688-9.426Zm-39.867 0 6.688 9.426-9.4 9.4-9.425-6.688L10.402-1.514ZM38.92-6.215 36.982 5.179H23.69L21.753-6.215h17.166Z"
+            fill="#FEF9EE" mask="url(#e)" />
+        <circle fill="url(#f)" cx="30.04" cy="30.558" r="26.414" />
+        <path
+            d="M30.04 49.72c10.87 0 19.68-8.81 19.68-19.68s-8.81-19.682-19.68-19.682S10.358 19.17 10.358 30.04 19.17 49.72 30.04 49.72Z"
+            stroke="url(#g)" stroke-width=".9" stroke-dasharray="1.8" />
+        <circle fill="url(#h)" cx="30.04" cy="30.04" r="17.609" />
+    </g>
+</svg>
